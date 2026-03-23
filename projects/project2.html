@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Recommender System | Rahul Singh</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../project.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">RS<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/resume/RahulSinghResume.pdf" class="btn-resume" target="_blank">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="project-hero-meta">
+        <span class="project-domain-tag"><i class="fas fa-film"></i> Recommender System / Deployed App</span>
+        <span class="project-status live">🟢 Live</span>
+      </div>
+      <h1 class="project-title">Movie Recommender <span class="highlight">System</span></h1>
+      <p class="project-subtitle">
+        Content-based movie recommendation engine using Cosine Similarity on genres, keywords,
+        cast & crew — deployed as an interactive Streamlit web app with real-time recommendations.
+      </p>
+      <div class="project-hero-stats">
+        <div class="p-stat"><span>5</span><p>Movies Recommended</p></div>
+        <div class="p-stat"><span>Live</span><p>Streamlit Deploy</p></div>
+        <div class="p-stat"><span>Content</span><p>Based Filtering</p></div>
+        <div class="p-stat"><span>Cosine</span><p>Similarity</p></div>
+      </div>
+      <div class="project-hero-links">
+        <a href="https://movie-recommender-system-rahulsinghds.streamlit.app" target="_blank" class="btn-primary">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        <a href="https://github.com/RahulSingh-DS/movie-recommender-system" target="_blank" class="btn-ghost">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-body section">
+    <div class="container project-layout">
+
+      <div class="project-main">
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+          <p>
+            Build a system that recommends movies similar to a user's selection without requiring
+            any user login or history. The system should run in real-time and be accessible
+            via a clean web interface — no Netflix account required!
+          </p>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-cogs"></i> How It Works</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Feature Extraction</h4>
+                <p>Movie metadata — <strong>genres, keywords, cast, and crew</strong> — are extracted and combined into a single "tags" string per movie.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Vectorization</h4>
+                <p>Tags are transformed into numerical vectors using <strong>Bag of Words</strong> (CountVectorizer), creating a matrix of movie feature vectors.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Similarity Computation</h4>
+                <p><strong>Cosine Similarity</strong> is computed between all movie vectors. Movies with the highest similarity scores are selected as recommendations.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Streamlit Deployment</h4>
+                <p>The entire app is wrapped in a <strong>Streamlit</strong> interface — users select a movie and get top 5 recommendations instantly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-star"></i> Features</h2>
+          <div class="feature-grid">
+            <span>🎥 Top 5 Similar Movies</span>
+            <span>⚡ Real-time Recommendations</span>
+            <span>🧠 No User Data Required</span>
+            <span>🌐 Live Web App</span>
+            <span>📊 Vectorized Similarity</span>
+            <span>🎨 Interactive UI</span>
+          </div>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-rocket"></i> Deployment</h2>
+          <p>
+            The app is fully deployed on <strong>Streamlit Cloud</strong> and accessible publicly.
+            The similarity matrix and movie data are serialized using <strong>pickle</strong> for
+            fast load times without recomputing on every request.
+          </p>
+          <a href="https://movie-recommender-system-rahulsinghds.streamlit.app" target="_blank" class="btn-primary" style="margin-top:1rem; display:inline-flex;">
+            <i class="fas fa-external-link-alt"></i> Open Live App
+          </a>
+        </div>
+
+      </div>
+
+      <div class="project-sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <div class="sidebar-tags">
+            <span>Python</span><span>NumPy</span><span>Pandas</span>
+            <span>Scikit-learn</span><span>Streamlit</span><span>Pickle</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Key Concepts</h4>
+          <div class="sidebar-tags">
+            <span>Content-Based Filtering</span><span>Cosine Similarity</span>
+            <span>Bag of Words</span><span>NLP</span>
+            <span>Vectorization</span><span>Deployment</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="https://movie-recommender-system-rahulsinghds.streamlit.app" target="_blank" class="sidebar-link">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+          <a href="https://github.com/RahulSingh-DS/movie-recommender-system" target="_blank" class="sidebar-link">
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>More Projects</h4>
+          <a href="project1.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Heart Disease Prediction</a>
+          <a href="project3.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Customer Segmentation</a>
+          <a href="project4.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Sales Forecasting</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Rahul Singh</strong> · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

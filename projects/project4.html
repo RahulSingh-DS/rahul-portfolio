@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sales Forecasting | Rahul Singh</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../project.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">RS<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/resume/RahulSinghResume.pdf" class="btn-resume" target="_blank">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="project-hero-meta">
+        <span class="project-domain-tag"><i class="fas fa-chart-line"></i> Time Series / Forecasting</span>
+        <span class="project-status live">Completed</span>
+      </div>
+      <h1 class="project-title">Sales <span class="highlight">Forecasting</span></h1>
+      <p class="project-subtitle">
+        Time series forecasting using ARIMA and Prophet on retail sales data —
+        achieving 6.2% MAPE with a reusable pipeline and Plotly visualizations for stakeholders.
+      </p>
+      <div class="project-hero-stats">
+        <div class="p-stat"><span>6.2%</span><p>MAPE Score</p></div>
+        <div class="p-stat"><span>ARIMA</span><p>Model 1</p></div>
+        <div class="p-stat"><span>Prophet</span><p>Model 2</p></div>
+        <div class="p-stat"><span>Reusable</span><p>Pipeline</p></div>
+      </div>
+      <div class="project-hero-links">
+        <a href="https://github.com/RahulSingh-DS" target="_blank" class="btn-primary">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-body section">
+    <div class="container project-layout">
+
+      <div class="project-main">
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+          <p>
+            Retail businesses need accurate sales forecasts to optimize inventory, staffing, and
+            marketing spend. This project builds and compares two time series forecasting models —
+            <strong>ARIMA</strong> and <strong>Prophet</strong> — to predict future sales trends
+            across multiple product datasets.
+          </p>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-cogs"></i> Approach & Methodology</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Time Series Decomposition</h4>
+                <p>Analyzed <strong>trend</strong>, <strong>seasonality</strong>, and <strong>residual</strong> components to understand the underlying patterns in sales data.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>ARIMA Modeling</h4>
+                <p>Fitted ARIMA model with optimal (p,d,q) parameters using ACF/PACF plots and AIC/BIC criterion for parameter selection.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Prophet Modeling</h4>
+                <p>Used Facebook's <strong>Prophet</strong> for automatic seasonality detection and holiday effects — more robust for business datasets.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Visualization & Pipeline</h4>
+                <p>Built <strong>actual vs predicted</strong> charts using Matplotlib and Plotly for stakeholder-friendly reporting. Wrapped everything in a reusable pipeline for multiple datasets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-chart-bar"></i> Results</h2>
+          <div class="results-table">
+            <div class="result-row header"><span>Metric</span><span>Value</span></div>
+            <div class="result-row highlight-row">
+              <span>🏆 MAPE (Mean Absolute % Error)</span>
+              <span class="result-score accent">6.2%</span>
+            </div>
+            <div class="result-row"><span>Models Compared</span><span class="result-score">ARIMA vs Prophet</span></div>
+            <div class="result-row"><span>Pipeline</span><span class="result-score">Multi-dataset Reusable</span></div>
+          </div>
+          <p class="result-note"><i class="fas fa-lightbulb"></i> A 6.2% MAPE is considered strong for retail sales forecasting — industry benchmark is typically under 10%.</p>
+        </div>
+
+      </div>
+
+      <div class="project-sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <div class="sidebar-tags">
+            <span>Python</span><span>ARIMA</span><span>Prophet</span>
+            <span>Pandas</span><span>Matplotlib</span><span>Plotly</span>
+            <span>Statsmodels</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Key Concepts</h4>
+          <div class="sidebar-tags">
+            <span>Time Series Analysis</span><span>ARIMA</span>
+            <span>Seasonality</span><span>Trend Decomposition</span>
+            <span>MAPE</span><span>Forecasting Pipeline</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="https://github.com/RahulSingh-DS" target="_blank" class="sidebar-link">
+            <i class="fab fa-github"></i> GitHub Profile
+          </a>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>More Projects</h4>
+          <a href="project1.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Heart Disease Prediction</a>
+          <a href="project2.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Movie Recommender System</a>
+          <a href="project3.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Customer Segmentation</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Rahul Singh</strong> · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

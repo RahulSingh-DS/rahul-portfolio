@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Segmentation | Rahul Singh</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../project.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">RS<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/resume/RahulSinghResume.pdf" class="btn-resume" target="_blank">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="project-hero-meta">
+        <span class="project-domain-tag"><i class="fas fa-users"></i> Machine Learning / Clustering</span>
+        <span class="project-status live">Completed</span>
+      </div>
+      <h1 class="project-title">Customer <span class="highlight">Segmentation</span></h1>
+      <p class="project-subtitle">
+        K-Means clustering on 200+ mall customer records — achieving Silhouette Score of 0.71
+        and suggesting campaign strategies with a potential 20% ROI improvement.
+      </p>
+      <div class="project-hero-stats">
+        <div class="p-stat"><span>0.71</span><p>Silhouette Score</p></div>
+        <div class="p-stat"><span>200+</span><p>Customers Analyzed</p></div>
+        <div class="p-stat"><span>20%</span><p>Potential ROI Gain</p></div>
+        <div class="p-stat"><span>K-Means</span><p>Algorithm</p></div>
+      </div>
+      <div class="project-hero-links">
+        <a href="https://github.com/RahulSingh-DS/Customer-Segmentatiob-using-K-means-Clustering." target="_blank" class="btn-primary">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-body section">
+    <div class="container project-layout">
+
+      <div class="project-main">
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+          <p>
+            Retail businesses need to understand their customer base to run targeted marketing campaigns.
+            This project segments mall customers based on their <strong>annual income</strong> and
+            <strong>spending score</strong> to identify actionable customer groups for personalized strategies.
+          </p>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-cogs"></i> Approach & Methodology</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Exploratory Data Analysis</h4>
+                <p>Analyzed 200+ customer records — distribution of age, income, and spending patterns. Identified outliers and performed normalization.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Data Preprocessing</h4>
+                <p>Applied <strong>normalization</strong> and <strong>outlier handling</strong> to ensure clean feature space for clustering.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Optimal K Selection</h4>
+                <p>Used the <strong>Elbow Method</strong> and <strong>Silhouette Score</strong> to determine the ideal number of clusters, landing on k=5.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Cluster Visualization & Interpretation</h4>
+                <p>Visualized clusters using <strong>Matplotlib</strong> scatter plots and labeled each segment with actionable business meaning.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-chart-bar"></i> Results & Business Impact</h2>
+          <div class="results-table">
+            <div class="result-row header"><span>Metric</span><span>Value</span></div>
+            <div class="result-row"><span>Silhouette Score</span><span class="result-score accent">0.71</span></div>
+            <div class="result-row"><span>Number of Clusters</span><span class="result-score">5</span></div>
+            <div class="result-row"><span>Customers Analyzed</span><span class="result-score">200+</span></div>
+            <div class="result-row highlight-row"><span>🎯 Estimated ROI Improvement</span><span class="result-score accent">20%</span></div>
+          </div>
+          <p class="result-note"><i class="fas fa-lightbulb"></i> Segments identified: High-income high-spenders, Budget-conscious shoppers, Standard customers, and more — each with tailored campaign recommendations.</p>
+        </div>
+
+      </div>
+
+      <div class="project-sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <div class="sidebar-tags">
+            <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
+            <span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Key Concepts</h4>
+          <div class="sidebar-tags">
+            <span>K-Means Clustering</span><span>Silhouette Score</span>
+            <span>Elbow Method</span><span>EDA</span>
+            <span>Normalization</span><span>Business Intelligence</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="https://github.com/RahulSingh-DS/Customer-Segmentatiob-using-K-means-Clustering." target="_blank" class="sidebar-link">
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>More Projects</h4>
+          <a href="project1.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Heart Disease Prediction</a>
+          <a href="project2.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Movie Recommender System</a>
+          <a href="project4.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Sales Forecasting</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Rahul Singh</strong> · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heart Disease Prediction | Rahul Singh</title>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../project.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">RS<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <a href="../assets/resume/RahulSinghResume.pdf" class="btn-resume" target="_blank">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="project-hero-meta">
+        <span class="project-domain-tag"><i class="fas fa-heartbeat"></i> Machine Learning / Kaggle Competition</span>
+        <span class="project-status live">Completed</span>
+      </div>
+      <h1 class="project-title">Heart Disease <span class="highlight">Prediction</span></h1>
+      <p class="project-subtitle">
+        Kaggle Playground Series S6E2 — LightGBM + XGBoost ensemble on 630K+ medical records
+        achieving ROC-AUC of 0.955, ranking in the top 40% among 4000+ participants.
+      </p>
+      <div class="project-hero-stats">
+        <div class="p-stat"><span>0.955</span><p>ROC-AUC Score</p></div>
+        <div class="p-stat"><span>Top 40%</span><p>Kaggle Rank</p></div>
+        <div class="p-stat"><span>630K+</span><p>Records</p></div>
+        <div class="p-stat"><span>5-Fold</span><p>Cross Validation</p></div>
+      </div>
+      <div class="project-hero-links">
+        <a href="https://github.com/RahulSingh-DS/heart-disease-kaggle-prediction" target="_blank" class="btn-primary">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <a href="https://www.kaggle.com/competitions/playground-series-s6e2" target="_blank" class="btn-ghost">
+          <i class="fab fa-kaggle"></i> Kaggle Competition
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-body section">
+    <div class="container project-layout">
+
+      <div class="project-main">
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+          <p>
+            The goal of this Kaggle competition was to predict whether a patient has heart disease
+            based on 13 medical attributes including age, cholesterol level, blood pressure, ECG results,
+            and maximum heart rate. The evaluation metric was <strong>ROC-AUC</strong>.
+          </p>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-database"></i> Dataset</h2>
+          <p>The dataset contained approximately <strong>630,000 records</strong> with 13 medical features:</p>
+          <div class="feature-grid">
+            <span>Age</span><span>Sex</span><span>Chest Pain Type</span><span>Blood Pressure</span>
+            <span>Cholesterol</span><span>Fasting Blood Sugar</span><span>ECG Results</span>
+            <span>Max Heart Rate</span><span>Exercise Angina</span><span>ST Depression</span>
+            <span>Slope of ST</span><span>No. of Vessels</span><span>Thallium Test</span>
+          </div>
+          <p class="mt-1">Target variable: <strong>Heart Disease (0 = Absence, 1 = Presence)</strong></p>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-cogs"></i> Approach & Methodology</h2>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Data Processing</h4>
+                <p>Feature cleaning, target encoding, and dataset merging. Handled class imbalance carefully during preprocessing.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Cross Validation Strategy</h4>
+                <p>Applied <strong>Stratified K-Fold (5 folds)</strong> to maintain class distribution across all validation splits and prevent data leakage.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Model Training</h4>
+                <p>Trained <strong>LightGBM</strong> and <strong>XGBoost</strong> independently with hyperparameter tuning on each fold.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Ensemble</h4>
+                <p>Final predictions generated by blending LightGBM and XGBoost outputs — improving generalization over single models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section reveal">
+          <h2><i class="fas fa-chart-bar"></i> Results</h2>
+          <div class="results-table">
+            <div class="result-row header">
+              <span>Model</span><span>CV ROC-AUC</span>
+            </div>
+            <div class="result-row">
+              <span>LightGBM</span><span class="result-score">0.9547</span>
+            </div>
+            <div class="result-row">
+              <span>XGBoost</span><span class="result-score">0.9548</span>
+            </div>
+            <div class="result-row highlight-row">
+              <span>🏆 Ensemble (Final)</span><span class="result-score accent">0.95495</span>
+            </div>
+          </div>
+          <p class="result-note"><i class="fas fa-trophy"></i> Kaggle Public Leaderboard: <strong>0.95299</strong> · Top ~40% among 4000+ participants</p>
+        </div>
+
+      </div>
+
+      <div class="project-sidebar">
+        <div class="sidebar-card reveal">
+          <h4>Tech Stack</h4>
+          <div class="sidebar-tags">
+            <span>Python</span><span>LightGBM</span><span>XGBoost</span>
+            <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
+            <span>Kaggle Notebooks</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Key Concepts</h4>
+          <div class="sidebar-tags">
+            <span>Ensemble Learning</span><span>Stratified K-Fold</span>
+            <span>Gradient Boosting</span><span>ROC-AUC</span>
+            <span>Feature Engineering</span><span>Class Imbalance</span>
+          </div>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>Links</h4>
+          <a href="https://github.com/RahulSingh-DS/heart-disease-kaggle-prediction" target="_blank" class="sidebar-link">
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+          <a href="https://www.kaggle.com/competitions/playground-series-s6e2" target="_blank" class="sidebar-link">
+            <i class="fab fa-kaggle"></i> Kaggle Competition
+          </a>
+          <a href="https://kaggle.com/rahulsinghdspy" target="_blank" class="sidebar-link">
+            <i class="fas fa-user"></i> My Kaggle Profile
+          </a>
+        </div>
+        <div class="sidebar-card reveal">
+          <h4>More Projects</h4>
+          <a href="project2.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Movie Recommender System</a>
+          <a href="project3.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Customer Segmentation</a>
+          <a href="project4.html" class="sidebar-link"><i class="fas fa-arrow-right"></i> Sales Forecasting</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Rahul Singh</strong> · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>

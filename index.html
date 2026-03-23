@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rahul Singh | Data Science Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════
+       NAVBAR
+  ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">RS<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="assets/resume/RahulSinghResume.pdf" class="btn-resume" target="_blank">
+      <i class="fas fa-file-arrow-down"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════
+       HERO
+  ═══════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+
+      <p class="hero-tag reveal">— <span id="typewriter"></span><span class="type-cursor">|</span></p>
+
+      <h1 class="hero-title reveal">
+        Hi, I'm <span class="highlight">Rahul Singh</span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        Final-year <strong>B.Tech Data Science</strong> student from Bhilai, CG — passionate about
+        building intelligent systems with <strong>Machine Learning</strong>, <strong>Deep Learning & NLP</strong>,
+        and turning raw data into decisions that matter.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn-ghost">Let's Connect</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span><span>+</span>
+          <p>Internships</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="4">0</span><span>+</span>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="300">0</span><span>+</span>
+          <p>DSA Problems</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="avatar-ring">
+        <div class="avatar-placeholder">
+          <img src="assets/images/pfp.jpg" alt="Rahul Singh" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=initials>RS</span>'" />
+        </div>
+      </div>
+      <div class="float-badge badge-1"><i class="fab fa-python"></i> Python</div>
+      <div class="float-badge badge-2"><i class="fas fa-brain"></i> ML / DL</div>
+      <div class="float-badge badge-3"><i class="fas fa-database"></i> SQL</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       ABOUT
+  ═══════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">About <span class="highlight">Me</span></h2>
+
+      <div class="about-grid">
+
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Rahul Singh</strong>, a final-year <strong>B.Tech Computer Science (Data Science)</strong>
+            student at Rungta International Skills University, Bhilai. I specialize in building
+            end-to-end machine learning pipelines, forecasting models, and data-driven solutions
+            that solve real business problems.
+          </p>
+          <p>
+            With hands-on internship experience at <strong>Codespaze</strong> and <strong>Swissmote</strong>,
+            I've worked on sales prediction, customer demand forecasting, and recommendation systems —
+            improving model accuracy by up to 15%. I thrive at the intersection of data, code, and business impact.
+          </p>
+          <p>
+            Currently seeking a <strong>full-time Data Science / ML Engineer role</strong> where I can
+            contribute to impactful products and keep pushing the boundaries of what data can do.
+          </p>
+          <div class="about-info">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Bhilai, Chhattisgarh, India</div>
+            <div class="info-item"><i class="fas fa-graduation-cap"></i> B.Tech CS (Data Science) — CGPA 7.1 — May 2026</div>
+            <div class="info-item"><i class="fas fa-university"></i> Rungta International Skills University</div>
+            <div class="info-item"><i class="fas fa-briefcase"></i> Open to Work — Full Time</div>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="card-inner">
+            <div class="card-header">
+              <span class="card-dot red"></span>
+              <span class="card-dot yellow"></span>
+              <span class="card-dot green"></span>
+              <span class="card-title">rahul_profile.py</span>
+            </div>
+            <pre class="code-block"><code><span class="c-keyword">class</span> <span class="c-class">RahulSingh</span>:
+  name    = <span class="c-str">"Rahul Singh"</span>
+  degree  = <span class="c-str">"B.Tech CS — Data Science"</span>
+  college = <span class="c-str">"Rungta Intl. Skills Univ."</span>
+  cgpa    = <span class="c-str">7.1</span>
+
+  skills  = [
+    <span class="c-str">"Machine Learning"</span>,
+    <span class="c-str">"Deep Learning / NLP"</span>,
+    <span class="c-str">"Data Visualization"</span>,
+    <span class="c-str">"SQL & Databases"</span>,
+  ]
+
+  tools   = [
+    <span class="c-str">"Python"</span>, <span class="c-str">"TensorFlow"</span>,
+    <span class="c-str">"PyTorch"</span>, <span class="c-str">"Scikit-learn"</span>,
+    <span class="c-str">"Django"</span>, <span class="c-str">"SQL"</span>,
+  ]
+
+  email   = <span class="c-str">"py.rahulsingh@gmail.com"</span>
+  goal    = <span class="c-str">"Data-Scientist Role🚀"</span>
+  status  = <span class="c-str">"Open to Work ✅"</span></code></pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       SKILLS
+  ═══════════════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">What I Know</div>
+      <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <h3>Machine Learning</h3>
+          <p>Regression, Classification, Clustering, Time Series Forecasting, Feature Engineering, Hyperparameter Tuning, EDA</p>
+          <div class="skill-tags">
+            <span>Scikit-learn</span><span>XGBoost</span><span>ARIMA</span><span>Prophet</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>Deep Learning & NLP</h3>
+          <p>Neural Networks, NLP pipelines, Generative AI concepts, Text Classification, Sequence Modeling</p>
+          <div class="skill-tags">
+            <span>TensorFlow</span><span>NLP</span><span>Gen AI</span><span>Deep Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analysis & Visualization</h3>
+          <p>Exploratory Data Analysis, storytelling with data, interactive charts, trend & seasonality decomposition</p>
+          <div class="skill-tags">
+            <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Plotly</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>Dev Tools & Frameworks</h3>
+          <p>Full pipeline development from data ingestion to deployment using modern Python frameworks and tools</p>
+          <div class="skill-tags">
+            <span>Django</span><span>Flask</span><span>MySQL</span><span>Git</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tech-bar reveal">
+        <span>Tech Stack →</span>
+        <div class="tech-logos">
+          <div class="tech-item"><i class="fab fa-python"></i><p>Python</p></div>
+          <div class="tech-item"><i class="fas fa-wave-square"></i><p>TensorFlow</p></div>
+          <div class="tech-item"><i class="fas fa-brain"></i><p>Scikit-learn</p></div>
+          <div class="tech-item"><i class="fas fa-database"></i><p>MySQL</p></div>
+          <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+          <div class="tech-item"><i class="fab fa-git-alt"></i><p>Git</p></div>
+          <div class="tech-item"><i class="fas fa-flask"></i><p>Django</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       EXPERIENCE
+  ═══════════════════════════ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-label">Where I've Worked</div>
+      <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">Swissmote</span>
+              <span class="timeline-badge">Remote</span>
+            </div>
+            <h3>Data Science Intern</h3>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> Nov 2024 – Dec 2024</p>
+            <ul class="timeline-points">
+              <li>Developed a recommendation system using collaborative filtering on real-world datasets to improve product suggestions.</li>
+              <li>Built a Sales Prediction model using regression techniques achieving over <strong>80% prediction accuracy</strong>.</li>
+              <li>Implemented end-to-end ML pipeline using Python, Pandas, NumPy, Matplotlib, and Scikit-learn.</li>
+              <li>Improved model performance via feature selection and hyperparameter tuning.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>Regression</span><span>Scikit-learn</span><span>Pandas</span><span>Collaborative Filtering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">Codespaze</span>
+              <span class="timeline-badge">Remote</span>
+            </div>
+            <h3>Data Science Intern</h3>
+            <p class="timeline-date"><i class="fas fa-calendar-alt"></i> Oct 2024 – Nov 2024</p>
+            <ul class="timeline-points">
+              <li>Developed ML models for mall sales, car sales, and customer demand prediction to support business forecasting.</li>
+              <li>Performed data cleaning, feature engineering, and model training using Python (Pandas, NumPy, Scikit-learn).</li>
+              <li>Improved prediction accuracy by <strong>10–15%</strong>, enabling data-driven inventory and marketing decisions.</li>
+              <li>Collaborated with cross-functional teams to define KPIs and translate data insights into actionable outcomes.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>ML Models</span><span>Feature Engineering</span><span>KPI Analysis</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       PROJECTS
+  ═══════════════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">What I've Built</div>
+      <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-num">01</div>
+          <div class="project-domain"><i class="fas fa-heartbeat"></i> Machine Learning / Kaggle</div>
+          <h3>Heart Disease Prediction</h3>
+          <p>Kaggle competition solution on 630K+ medical records. Used <strong>LightGBM + XGBoost ensemble</strong> with 5-fold stratified cross-validation, achieving <strong>ROC-AUC of 0.955</strong> and ranking in the <strong>top 40% among 4000+ participants</strong>.</p>
+          <div class="project-tags">
+            <span>Python</span><span>LightGBM</span><span>XGBoost</span><span>Scikit-learn</span><span>Kaggle</span>
+          </div>
+          <div class="project-links-row">
+            <a href="projects/project1.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/RahulSingh-DS/heart-disease-kaggle-prediction" target="_blank" class="project-link live-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">02</div>
+          <div class="project-domain"><i class="fas fa-film"></i> Recommender System / Deployed</div>
+          <h3>Movie Recommender System</h3>
+          <p>Content-based movie recommendation engine using <strong>Cosine Similarity</strong> on genres, keywords, cast & crew. Built an interactive <strong>Streamlit web app</strong> with real-time recommendations — fully deployed and live.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>Cosine Similarity</span><span>NumPy</span><span>Pandas</span>
+          </div>
+          <div class="project-links-row">
+            <a href="projects/project2.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/RahulSingh-DS/movie-recommender-system" target="_blank" class="project-link live-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://movie-recommender-system-rahulsinghds.streamlit.app" target="_blank" class="project-link live-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">03</div>
+          <div class="project-domain"><i class="fas fa-users"></i> Machine Learning / Clustering</div>
+          <h3>Customer Segmentation using K-Means</h3>
+          <p>Analyzed 200+ mall customers using K-Means clustering achieving a <strong>Silhouette Score of 0.71</strong>. Identified actionable segments and suggested marketing strategies with a potential <strong>20% ROI improvement</strong>.</p>
+          <div class="project-tags">
+            <span>Python</span><span>K-Means</span><span>Scikit-learn</span><span>Matplotlib</span><span>EDA</span>
+          </div>
+          <div class="project-links-row">
+            <a href="projects/project3.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/RahulSingh-DS/Customer-Segmentatiob-using-K-means-Clustering." target="_blank" class="project-link live-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-num">04</div>
+          <div class="project-domain"><i class="fas fa-chart-line"></i> Time Series / Forecasting</div>
+          <h3>Sales Forecasting using Time Series</h3>
+          <p>Developed forecasting models using <strong>ARIMA and Prophet</strong> achieving <strong>6.2% MAPE</strong>. Built a reusable pipeline supporting multiple retail product datasets with Plotly visualizations for stakeholder-friendly insights.</p>
+          <div class="project-tags">
+            <span>Python</span><span>ARIMA</span><span>Prophet</span><span>Plotly</span><span>Time Series</span>
+          </div>
+          <div class="project-links-row">
+            <a href="projects/project4.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/RahulSingh-DS" target="_blank" class="project-link live-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       CONTACT
+  ═══════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+
+      <p class="contact-sub reveal">
+        I'm actively looking for full-time Data Science opportunities.
+        If you have a role or just want to talk data, my inbox is always open.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-links reveal">
+          <a href="mailto:py.rahulsingh@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div><strong>Email</strong><span>py.rahulsingh@gmail.com</span></div>
+          </a>
+          <a href="https://linkedin.com/in/pyrahul" target="_blank" class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div><strong>LinkedIn</strong><span>linkedin.com/in/pyrahul</span></div>
+          </a>
+          <a href="https://github.com/RahulSingh-DS" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i>
+            <div><strong>GitHub</strong><span>github.com/RahulSingh-DS</span></div>
+          </a>
+          <a href="https://kaggle.com/rahulsinghdspy" target="_blank" class="contact-item">
+            <i class="fab fa-kaggle"></i>
+            <div><strong>Kaggle</strong><span>kaggle.com/rahulsinghdspy</span></div>
+          </a>
+        </div>
+
+        <div class="contact-cta reveal">
+          <div class="cta-box">
+            <h3>Open to Opportunities</h3>
+            <p>Full-time · Data Science · ML Engineer · Data Analyst</p>
+            <p class="cta-location"><i class="fas fa-map-marker-alt"></i> Bhilai, CG / Remote / Relocation</p>
+            <a href="mailto:py.rahulsingh@gmail.com" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Say Hello
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FOOTER
+  ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Rahul Singh</strong> · 2025</p>
+      <p class="footer-sub">Data Science Portfolio · Bhilai, Chhattisgarh</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
